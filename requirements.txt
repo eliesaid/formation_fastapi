@@ -1,2 +1,25 @@
+# --- Framework API ---
 fastapi==0.116.1
-uvicorn[standard]==0.30.1
+uvicorn[standard]==0.30.6   # serveur ASGI pour lancer l’app
+
+# --- Validation et config ---
+pydantic==2.9.1
+pydantic-settings==2.5.2    # gestion de la config via .env
+
+# --- Base de données ---
+SQLAlchemy==2.0.34          # ORM
+alembic==1.13.2             # migrations (optionnel mais conseillé)
+
+# --- Sécurité / Authentification ---
+python-jose==3.3.0          # génération/validation JWT
+passlib[bcrypt]==1.7.4      # hashage des mots de passe
+bcrypt==3.2.2               # backend utilisé par passlib
+python-multipart==0.0.9     # gestion des formulaires (login avec OAuth2)
+
+# --- Tests (Jour 3 optionnel) ---
+pytest==8.3.3
+pytest-asyncio==0.23.8
+httpx==0.27.0               # client HTTP pour tester les endpoints
+
+# Validation email (nécessaire pour EmailStr)
+email-validator==2.1.1
