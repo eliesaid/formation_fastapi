@@ -47,6 +47,7 @@ def create_access_token(username: str, role: str) -> str:
 
 def get_current_user(token: str = Depends(oauth2_scheme)) -> dict:
     try:
+        
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         username = payload.get("sub")
         role = payload.get("role")

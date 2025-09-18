@@ -5,7 +5,12 @@ __pycache__/
 
 # Fichiers temporaires
 *.log
-*.sqlite3
 
-# OS
+# Bases de données SQLite
+*.sqlite3
+*.db
+
+# OS / IDE
 .DS_Store
+.idea/
+.vscode/

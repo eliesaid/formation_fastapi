@@ -159,6 +159,8 @@ class ProductRead(ProductBase):
     id: int
     class Config:
         from_attributes = True
+        # Config.from_attributes = True = autorise Pydantic à convertir 
+        # un objet ORM en schéma Pydantic automatiquement.
 
 class UserCreate(BaseModel):
     email: EmailStr
